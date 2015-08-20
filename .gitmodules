@@ -1,3 +1,0 @@
-[submodule "RASPBERRYPI/ROS"]
-	path = RASPBERRYPI/ROS
-	url = https://github.com/Tokunn/robo15_ROS.git
