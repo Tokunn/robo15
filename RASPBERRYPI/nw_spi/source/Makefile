@@ -35,7 +35,7 @@ clean:
 	$(RM) -r $(OBJECTS) $(DEPENDS) $(TARGET) $(BIN_DIR) `readlink -f $(OBJDIR)`
 
 upload: $(BIN_DIR) $(TARGET)
-	scp $(TARGET) ubuntu@172.16.14.224:~/
+	scp $(TARGET) alarm@172.16.14.178:~/
 
 
 -include $(DEPENDS)

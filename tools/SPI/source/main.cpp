@@ -8,8 +8,9 @@
 #define CS 1
 
 int main() {
-    uint8_t packet[PACKET_SIZE] = {0x6};
+    uint8_t packet[PACKET_SIZE] = {0x10};
     SPI *spi = new SPI(BUS, CS, !SPI_CPOL | SPI_CPHA);
+
     uint8_t *rxbuf = spi->transfer(PACKET_SIZE, packet);
 
     printf("Send:0x%x \t Recive:0x%x\n", packet[0], rxbuf[0]);

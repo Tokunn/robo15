@@ -56,8 +56,10 @@ uint8_t *SPI::transfer( int len , uint8_t *txbuf)
 	send.speed_hz = this->speed;
 	send.bits_per_word = this->bits_per_word;
 	send.cs_change = this->cs_change;
-	
+
+    errno = 0;
 	int r = ioctl( this->fd, SPI_IOC_MESSAGE(1), &send );
+    printf("errno : %d\n", errno);
 	if( r < 1 ) {
 		delete(rxbuf);
 		throw SPIException(string("SPI transfer error"));
