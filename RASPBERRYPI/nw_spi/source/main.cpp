@@ -14,6 +14,7 @@
 #define CS 1
 
 int main() {
+    printf("nw_spi starting ... ");
     int sock = socket(AF_INET, SOCK_DGRAM, 0);
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
@@ -21,6 +22,7 @@ int main() {
     addr.sin_addr.s_addr = INADDR_ANY;
     char buf[2048];
     SPI *spi = new SPI(BUS, CS, !SPI_CPOL | SPI_CPHA);
+    printf("done\n");
 
     while (true) {
         bind(sock, (struct sockaddr *)&addr, sizeof(addr));
