@@ -36,8 +36,8 @@ clean:
 
 upload: $(BIN_DIR) $(TARGET)
 	#scp $(TARGET) pi@192.168.1.7:~/
-	#scp $(TARGET) alarm@172.16.14.178:~/
-	scp $(TARGET) ubuntu@172.16.14.244:~/
+	scp $(TARGET) alarm@172.16.14.178:~/
+	#scp $(TARGET) ubuntu@172.16.14.244:~/
 	#scp $(TARGET) pi@172.16.14.120:~/
 
 
