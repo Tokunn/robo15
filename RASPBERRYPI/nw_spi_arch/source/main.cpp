@@ -99,7 +99,8 @@ int main() {
         //uint8_t *rxbuf = spi->transfer(PACKET_SIZE, packet);
         //printf("Send:0x%x \t Recive:0x%x\n", packet[0], rxbuf[0]);
         int return_val = wiringPiSPIDataRW(CS, packet, &rxbuf, 1);
-        printf("txbuf:%d, rxbuf:%d return:%d\n", packet[0], rxbuf, return_val);
+        //printf("txbuf:%d, rxbuf:%d return:%d\n", packet[0], rxbuf, return_val);
+        printf("Send:0x%x \t Recive:0x%x\n", packet[0], rxbuf);
         //delete(rxbuf);
     }
     //delete(spi);
