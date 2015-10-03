@@ -8,7 +8,7 @@ const int axis_t_unit = pow(2,AXIS_T_BITS) -1;			//turn value bit suu
 const int axis_x_reso = (AXIS_VAL_MAX * 2) / (axis_x_unit+1);	//x value per bit
 const int axis_y_reso = (AXIS_VAL_MAX * 2) / (axis_y_unit+1);	//y value per bit
 const int axis_t_reso = (AXIS_VAL_MAX * 2) / (axis_t_unit+1);	//turn value per bit
-Gpads_cmd raw_cmd;				//Commands which got from Game Pad
+//Gpads_cmd raw_cmd;				//Commands which got from Game Pad
 
 void chatterCallback(void){
     //It's interrupt function
@@ -16,7 +16,7 @@ void chatterCallback(void){
 }
 
 //Function who makes shooting command
-unsigned char makeFirCmd(Gpads_cmd p_cmd){
+unsigned char makeFirCmd(ros_robo15::Gamepad_cmd p_cmd){
 
     unsigned char r_cmd = 0;
     unsigned char buf	= 0;
@@ -42,7 +42,7 @@ unsigned char makeFirCmd(Gpads_cmd p_cmd){
 }
 
 //Function who makes moving command
-unsigned char makeMovCmd(Gpads_cmd p_cmd){
+unsigned char makeMovCmd(ros_robo15::Gamepad_cmd p_cmd){
 
     unsigned char r_cmd = 0;
     unsigned char buf	= 0;
@@ -87,7 +87,7 @@ unsigned char makeMovCmd(Gpads_cmd p_cmd){
     return r_cmd;
 }
 
-int main(void){
+/*int main(void){
 
     unsigned char   fir_cmd = 0;	//Shoot rings command
     unsigned char   mov_cmd = 0;	//Command which moves robot.
@@ -98,5 +98,5 @@ int main(void){
     printf("%x %x\n",fir_cmd,mov_cmd);
 
     return 0;
-}
+}*/
 
