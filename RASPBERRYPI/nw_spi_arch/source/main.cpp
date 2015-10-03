@@ -17,7 +17,7 @@
 #define PACKET_SIZE	1
 #define BUS 0
 #define CS 1
-#define SPEED 2000000
+#define SPEED 500000
 #define MODE 3
 
 #define VALUE 0x2e
