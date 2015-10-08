@@ -18,7 +18,7 @@
 #define BUS 0
 #define CS 1
 #define SPEED 500000
-#define MODE 3
+#define MODE 0
 
 #define VALUE 0x2e
 
